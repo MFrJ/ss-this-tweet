@@ -1,9 +1,7 @@
 import tweepy
 import json
 from api_operations import get_tweet, get_url_to_ss, get_imgur_client, post_tweet
-import webbrowser
 from screenshot import get_png, get_embedded_tweet
-import imgkit
 import logging
 
 
