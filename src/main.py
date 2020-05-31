@@ -10,6 +10,7 @@ logging.basicConfig(level = logging.INFO)
 
 def main():
 
+
     ## get authenticated twitter api ##
     twitter_api = get_twitter_api()
 
@@ -20,7 +21,7 @@ def main():
     
     stream = tweepy.Stream(auth=twitter_api.auth, listener=mention_listener)
     stream.filter(track=['ss_this_tweet'], is_async=True)
-    logging.info('tracking user mentions')
+    logging.info('started tracking user mentions')
 
 
 if __name__ == '__main__':
