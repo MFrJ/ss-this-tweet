@@ -1,4 +1,5 @@
 from selenium import webdriver
+from selenium.webdriver.firefox.options import Options
 import time
 import requests
 import logging
@@ -8,7 +9,9 @@ def get_png(html):
 
     logging.info('opening browser')
 
-    driver = webdriver.Firefox()
+    options = Options()
+    options.headless = True
+    driver = webdriver.Firefox(options=options)
     driver.get('https://htmledit.squarefree.com/')
 
     ## site uses frames, so it needs navigating between them ##
